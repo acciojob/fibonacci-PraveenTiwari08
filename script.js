@@ -1,11 +1,12 @@
 function fibonacci(num) {
 // your code here
-	var fibSeries = [0, 1]; // Initialize the series with the first two terms
-    for (var i = 2; i < num; i++) {
-        var nextTerm = fibSeries[i - 1] + fibSeries[i - 2]; // Calculate the next term
-        fibSeries.push(nextTerm); // Add the next term to the series
+	 if (num === 0) {
+        return 0;
+    } else if (num === 1) {
+        return 1;
+    } else {
+        return fibonacci(num - 1) + fibonacci(num - 2);
     }
-    return fibSeries;
 }
 
 module.exports = fibonacci;
